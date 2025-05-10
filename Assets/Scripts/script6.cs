@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class script6 : MonoBehaviour
 {
-    public int partenza = 4;
-    // Start is called before the first frame update
+    public int partenza;
+    private int i = 0;
+
     void Start()
     {
         Debug.Log("il numero di partenza è" + partenza);
-        Debug.Log(1 + partenza);
-        Debug.Log(2 + partenza);
+        Stampa2Successivi(partenza);
     }
 
-    // Update is called once per frame
-    void Update()
+public int Stampa2Successivi(int partenza)
     {
-        
+        while (i < 2)
+        {
+            partenza++;
+            Debug.Log(partenza);
+            i++;
+        }
+        return partenza;
     }
+
+
+
 }

@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class script7 : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public int a = 32;
-    
+    public int partenza;
+    private int i = 0;
     void Start()
     {
-        Debug.Log("il numero di partenza è" + a);
-        Debug.Log(a - 1);
-        Debug.Log(a - 2);
+        Debug.Log("il numero di partenza è" + partenza);
+        Stampa2Precedenti(partenza);
     }
-
-    // Update is called once per frame
-    void Update()
+    public int Stampa2Precedenti(int partenza)
     {
-        
+        while (i < 2)
+        {
+            partenza--;
+            Debug.Log(partenza);
+            i++;
+        }
+        return partenza;
     }
 }

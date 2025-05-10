@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class script8 : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public int a = 2;
     public int b = 3;
     void Start()
     {
-        if (a > b)
-            Debug.Log("a è il numero più alto" + a);
-        else
-            Debug.Log("b è il numero più alto" + b);
+       MaggioreFra2(a, b); 
     }
 
-    // Update is called once per frame
-    void Update()
+    public int MaggioreFra2(int a, int b)
     {
-        
+        int c;
+        if (a > b)
+        {
+            Debug.Log("a è il numero più alto" + a);
+            c = a;
+        }
+        else
+        {
+            Debug.Log("b è il numero più alto" + b);
+            c = b;
+        }
+        return c;
+            
+
     }
 }
